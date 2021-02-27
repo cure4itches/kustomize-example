@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-nginx
+  labels:
+    env: dev
+spec:
+  replicas: 4
+  template:
+    spec:
+      containers:
+        - name: my-nginx
+          env:
+            - name: FOO
+              value: BAR
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "1Gi"
+              cpu: "500m"
+
+      

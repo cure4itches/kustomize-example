@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-nginx
+  labels:
+    env: prod
+spec:
+  replicas: 6
+  template:
+    spec:
+      containers:
+        - name: my-nginx
+          env:
+            - name: HELLO
+              value: WORLD
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "500m"
+            limits:
+              memory: "2Gi"
+              cpu: "2"
