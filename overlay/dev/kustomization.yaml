@@ -5,3 +5,8 @@ patchesStrategicMerge:
   - service-patch.yaml
 commonLabels:
   env: dev
+configMapGenerator:
+  - name: app-env-vars
+    behavior: merge
+    envs:
+    - conf/app.env
