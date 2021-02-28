@@ -3,3 +3,5 @@ bases:
 patchesStrategicMerge:
   - deployment-patch.yaml
   - service-patch.yaml
+commonLabels:
+  env: dev
