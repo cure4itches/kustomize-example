@@ -5,10 +5,10 @@ A simple Nginx application with kustomize
 ### dev
 ```shell
 kubectl create namespace dev
-kustomize overlay/dev | kubectl -n dev apply -f -
+kustomize build overlay/dev | kubectl -n dev apply -f -
 ```
 ### prod
 ```shell
 kubectl create namespace prod
-kustomize overlay/prod | kubectl -n prod apply -f -
+kustomize build overlay/prod | kubectl -n prod apply -f -
 ```
